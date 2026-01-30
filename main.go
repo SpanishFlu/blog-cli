@@ -23,8 +23,7 @@ func main() {
 		case 6:
 			fmt.Println("Search Posts Selected")
 		case 0:
-			fmt.Println("Exitting")
-			Exit()
+			fmt.Println("Alright, waiting for the next blog (;")
 		default:
 			fmt.Println("Invalid Choice Please Try Again")
 		}
