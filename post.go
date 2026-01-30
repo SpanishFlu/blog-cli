@@ -1,3 +1,6 @@
 package main
 
-func post() {}
+type post struct {
+	title, contents, author string
+	ID                      int
+}
