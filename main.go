@@ -24,7 +24,7 @@ func main() {
 			fmt.Println("Search Posts Selected")
 		case 0:
 			fmt.Println("Alright, waiting for the next blog (;")
-			break
+			return
 		default:
 			fmt.Println("Invalid Choice Please Try Again")
 		}
