@@ -24,6 +24,7 @@ func main() {
 			fmt.Println("Search Posts Selected")
 		case 0:
 			fmt.Println("Exitting")
+			Exit()
 		default:
 			fmt.Println("Invalid Choice Please Try Again")
 		}
