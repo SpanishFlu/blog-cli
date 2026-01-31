@@ -25,5 +25,6 @@ func savingPost() {
 	p.contents = append(p.contents, contents)
 	p.author = append(p.author, author)
 	s = p.title[0]
+	fmt.Printf("len=%d %v\n", len(s), s)
 
 }
