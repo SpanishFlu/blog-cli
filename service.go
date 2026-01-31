@@ -30,5 +30,6 @@ func savingPost() {
 		fmt.Println("Content:", p.contents[i])
 		//fmt.Println(p.ID[i])
 	}
+	fmt.Printf(%d, len(p.title))
 
 }
