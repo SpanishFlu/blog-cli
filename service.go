@@ -4,6 +4,7 @@ import "fmt"
 
 func creatingPost() (string, string, string) {
 	var title, contents, author string
+
 	fmt.Println("Please Enter The Title")
 	fmt.Scanln(&title)
 
@@ -18,18 +19,14 @@ func creatingPost() (string, string, string) {
 }
 
 func savingPost() {
-	p := post{}
+	var Blog blog
 	title, contents, author := creatingPost()
-	p.title = append(p.title, title)
-	p.contents = append(p.contents, contents)
-	p.author = append(p.author, author)
-	for i := range p.title {
-		fmt.Println("---------------")
-		fmt.Println("Title  :", p.title[i])
-		fmt.Println("Author :", p.author[i])
-		fmt.Println("Content:", p.contents[i])
-		//fmt.Println(p.ID[i])
+	p := Post{
+		Title:    title,
+		Contents: contents,
+		Author:   author,
+		ID:       assignID(&Blog),
 	}
-	fmt.Printf(%d, len(p.title))
-
+	// same as p.Title = title
+	Blog.Posts = append(Blog.Posts, p)
 }
