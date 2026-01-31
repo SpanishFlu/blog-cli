@@ -28,7 +28,7 @@ func savingPost() {
 		fmt.Println("Title  :", p.title[i])
 		fmt.Println("Author :", p.author[i])
 		fmt.Println("Content:", p.contents[i])
-		fmt.Println(p.ID[i])
+		//fmt.Println(p.ID[i])
 	}
 
 }
