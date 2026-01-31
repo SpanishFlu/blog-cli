@@ -19,9 +19,11 @@ func creatingPost() (string, string, string) {
 
 func savingPost() {
 	p := post{}
+	var s string
 	title, contents, author := creatingPost()
 	p.title = append(p.title, title)
 	p.contents = append(p.contents, contents)
 	p.author = append(p.author, author)
+	s = p.title[0]
 
 }
