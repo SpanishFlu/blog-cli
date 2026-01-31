@@ -30,3 +30,10 @@ func savingPost() {
 	// same as p.Title = title
 	Blog.Posts = append(Blog.Posts, p)
 }
+
+func ViewPostCreated() {
+	title, contents, author := creatingPost()
+	fmt.Printf("Title: %s", title)
+	fmt.Printf("Contents: %s", contents)
+	fmt.Printf("Author: %s", author)
+}

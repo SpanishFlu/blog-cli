@@ -12,7 +12,8 @@ func main() {
 		switch Choose {
 		case 1:
 			fmt.Println("Create Post selected")
-			savingPost()
+			creatingPost()
+			ViewPostCreated()
 		case 2:
 			fmt.Println("Viewing All Posts")
 		case 3:
