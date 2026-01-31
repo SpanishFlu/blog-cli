@@ -19,12 +19,19 @@ func creatingPost() (string, string, string) {
 
 func savingPost() {
 	p := post{}
+	var n int
+	var m int
 	var s string
 	title, contents, author := creatingPost()
 	p.title = append(p.title, title)
 	p.contents = append(p.contents, contents)
 	p.author = append(p.author, author)
-	s = p.title[0]
-	fmt.Printf("len=%d %v\n", len(s), s)
-
+	s = p.title[n]
+	for {
+		if m <= n {
+			break
+		}
+		fmt.Printf("len=%d %v\n", len(s), s)
+		m++
+	}
 }
