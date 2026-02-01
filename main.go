@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	var Choose int
 	fmt.Println("Blog CLI start")
+	myBlog := blog{}
 
 	for {
 		printmenu()
@@ -16,6 +17,7 @@ func main() {
 			ViewPostCreated()
 		case 2:
 			fmt.Println("Viewing All Posts")
+			viewingPosts(&myBlog)
 		case 3:
 			fmt.Println("View Post by ID selected")
 		case 4:
