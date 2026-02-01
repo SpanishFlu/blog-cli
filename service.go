@@ -37,3 +37,12 @@ func ViewPostCreated() {
 	fmt.Printf("Contents: %s", contents)
 	fmt.Printf("Author: %s", author)
 }
+
+func viewingPosts(blog *blog) {
+	for _, post := range blog.Posts {
+		fmt.Println("---------------")
+		fmt.Printf("Title: %s\n", post.Title)
+		fmt.Printf("%s\n", post.Contents)
+		fmt.Printf("Author: %s\n", post.Author)
+	}
+}
