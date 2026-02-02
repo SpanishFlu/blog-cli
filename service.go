@@ -27,7 +27,6 @@ var Blog blog
 	}
 */
 func creatingPost() (string, string, string) {
-	var title, contents, author string
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Println("Please Enter The Title:")
