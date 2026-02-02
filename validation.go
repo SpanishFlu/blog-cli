@@ -6,11 +6,13 @@ import (
 
 func validationCreatedPost(title, contents, author string) error {
 	if title == "" {
-		errors.New("Title is empty")
-	} else if contents == "" {
-		errors.New("No contents were entered")
-	} else if author == "" {
-		errors.New("Author Name wasn't entered")
+		return errors.New("Title is empty")
+	}
+	if contents == "" {
+		return errors.New("No contents were entered")
+	}
+	if author == "" {
+		return errors.New("Author Name wasn't entered")
 	}
 	return nil
 }
