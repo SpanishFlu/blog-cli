@@ -22,11 +22,11 @@ func creatingPost(blog *blog) {
 	author, _ := reader.ReadString('\n')
 	author = strings.TrimSpace(author)
 
-	err := validationCreatedPost(title, contents, author)
-	if err != nil {
-		fmt.Println("Error: ", err)
+	if err := validationCreatedPost(title, contents, author); err != nil {
+		fmt.Println("Post creation failed:", err)
 		return
 	}
+
 	savingPost(blog, title, contents, author)
 	fmt.Println(">>> Post Created Successfully <<<")
 }
