@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func creatingPost() (string, string, string) {
 	var title, contents, author string
