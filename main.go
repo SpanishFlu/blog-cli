@@ -14,7 +14,7 @@ func main() {
 		case 1:
 			fmt.Println("Create Post selected")
 			creatingPost()
-			ViewPostCreated()
+			//ViewPostCreated()
 		case 2:
 			fmt.Println("Viewing All Posts")
 			viewingPosts(&myBlog)
