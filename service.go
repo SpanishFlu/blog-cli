@@ -48,5 +48,6 @@ func viewingPosts(blog *blog) {
 		fmt.Printf("Title: %s\n", p.Title)
 		fmt.Printf("%s\n", p.Contents)
 		fmt.Printf("Author: %s\n", p.Author)
+		fmt.Printf("ID: %d\n", p.ID)
 	}
 }
