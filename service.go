@@ -58,6 +58,10 @@ func savingPost(title, contents, author string) {
 }
 
 func viewingPosts(blog *blog) {
+	if len(blog.Posts) == 0 {
+		fmt.Println("No posts available.")
+		return
+	}
 	for _, p := range blog.Posts {
 		fmt.Println("---------------")
 		fmt.Printf("Title: %s\n", p.Title)
