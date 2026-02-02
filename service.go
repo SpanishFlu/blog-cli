@@ -7,25 +7,6 @@ import (
 	"strings"
 )
 
-var Blog blog
-
-/*
-	func creatingPost() (string, string, string) {
-		var title, contents, author string
-
-		fmt.Println("Please Enter The Title")
-		fmt.Scanln(&title)
-
-		fmt.Println("Please Type Your Post")
-		fmt.Scanln(&contents)
-
-		fmt.Println("Please Enter The Author Name")
-		fmt.Scanln(&author)
-		validationCreatedPost(title, contents, author)
-		fmt.Println("Post Created Successfully")
-		return title, contents, author
-	}
-*/
 func creatingPost(blog *blog) {
 	reader := bufio.NewReader(os.Stdin)
 
@@ -42,19 +23,19 @@ func creatingPost(blog *blog) {
 	author = strings.TrimSpace(author)
 
 	validationCreatedPost(title, contents, author)
-	savingPost(title, contents, author)
+	savingPost(blog, title, contents, author)
 	fmt.Println(">>> Post Created Successfully <<<")
 }
 
-func savingPost(title, contents, author string) {
+func savingPost(blog *blog, title, contents, author string) {
 	p := Post{
 		Title:    title,
 		Contents: contents,
 		Author:   author,
-		ID:       assignID(&Blog),
+		ID:       assignID(blog),
 	}
 	// same as p.Title = title
-	Blog.Posts = append(Blog.Posts, p)
+	blog.Posts = append(blog.Posts, p)
 }
 
 func viewingPosts(blog *blog) {
