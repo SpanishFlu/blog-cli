@@ -17,15 +17,6 @@ type blog struct {
 	Posts map[uint]Post
 }
 
-/*func checkID(blog *blog, id uint) bool {
-	for _, post := range blog.Posts {
-		if post.ID == id {
-			return true
-		}
-	}
-	return false
-}*/
-
 func Newassign(blog *blog) uint {
 	for {
 		id := uint(rand.IntN(1000))
