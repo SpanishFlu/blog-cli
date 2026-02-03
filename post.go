@@ -1,6 +1,7 @@
 package main
 
 //import "math/rand/v2"
+var pid uint = 0
 
 type Post struct {
 	Title, Contents, Author string
@@ -8,8 +9,6 @@ type Post struct {
 }
 
 func assignID(blog *blog) uint {
-	var pid uint
-	pid = 0
 	pid++
 	return pid
 }
