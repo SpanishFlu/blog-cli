@@ -13,16 +13,23 @@ func creatingPost(blog *blog) {
 	fmt.Println("Please Enter The Title:")
 	title, _ := reader.ReadString('\n')
 	title = strings.TrimSpace(title)
+	if err := validationCreatedPost(title); err != nil {
+		fmt.Println("Post creation failed:", err)
+		return
+	}
 
 	fmt.Println("Please Type Your Post:")
 	contents, _ := reader.ReadString('\n')
 	contents = strings.TrimSpace(contents)
+	if err := validationCreatedPost(contents); err != nil {
+		fmt.Println("Post creation failed:", err)
+		return
+	}
 
 	fmt.Println("Please Enter The Author Name:")
 	author, _ := reader.ReadString('\n')
 	author = strings.TrimSpace(author)
-
-	if err := validationCreatedPost(title, contents, author); err != nil {
+	if err := validationCreatedPost(author); err != nil {
 		fmt.Println("Post creation failed:", err)
 		return
 	}

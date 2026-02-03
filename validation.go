@@ -4,15 +4,9 @@ import (
 	"errors"
 )
 
-func validationCreatedPost(title, contents, author string) error {
-	if title == "" {
-		return errors.New("Title is empty")
-	}
-	if contents == "" {
-		return errors.New("No contents were entered")
-	}
-	if author == "" {
-		return errors.New("Author Name wasn't entered")
+func validationCreatedPost(x string) error {
+	if x == "" {
+		return errors.New("this part can't be empty")
 	}
 	return nil
 }
