@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 )
 
 func validationCreatedPost(x string) error {
@@ -13,5 +14,8 @@ func validationCreatedPost(x string) error {
 
 func checkIfPostExists(blog *blog, id uint) bool {
 	_, exists := blog.Posts[id]
+	if len(blog.Posts) == 0 {
+		fmt.Println("No posts has been created yet xoxo")
+	}
 	return exists
 }
