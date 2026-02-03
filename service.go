@@ -9,21 +9,21 @@ func creatingPost(blog *blog) {
 	fmt.Println("Please Enter The Title:")
 	fmt.Scanln(&title)
 	if err := validationCreatedPost(title); err != nil {
-		fmt.Println("Post creation failed:", err)
+		fmt.Println(err, "Title can't be empty")
 		return
 	}
 
 	fmt.Println("Please Type Your Post:")
 	fmt.Scanln(&contents)
 	if err := validationCreatedPost(contents); err != nil {
-		fmt.Println("Post creation failed:", err)
+		fmt.Println(err, "No contents have been entered")
 		return
 	}
 
 	fmt.Println("Please Enter The Author Name:")
 	fmt.Scanln(&author)
 	if err := validationCreatedPost(author); err != nil {
-		fmt.Println("Post creation failed:", err)
+		fmt.Println(err, "The auther name is empty")
 		return
 	}
 
