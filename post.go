@@ -8,7 +8,7 @@ type Post struct {
 	Title, Contents, Author string
 }
 
-func assignID(blog *blog) uint {
+func assignID() uint {
 	id++
 	return id
 }

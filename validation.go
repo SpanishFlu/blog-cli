@@ -6,7 +6,7 @@ import (
 
 func validationCreatedPost(x string) error {
 	if x == "" {
-		return errors.New("this part can't be empty")
+		return errors.New("Post creation failed: ")
 	}
 	return nil
 }
