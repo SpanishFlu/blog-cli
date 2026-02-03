@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func creatingPost(blog *blog) {
@@ -23,7 +22,6 @@ func creatingPost(blog *blog) {
 
 	fmt.Println("Please Enter The Author Name:")
 	fmt.Scanln(&author)
-	author = strings.TrimSpace(author)
 	if err := validationCreatedPost(author); err != nil {
 		fmt.Println("Post creation failed:", err)
 		return
