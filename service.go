@@ -36,7 +36,7 @@ func creatingPost(blog *blog) {
 
 	x := savingPost(blog, title, contents, author)
 	fmt.Println(">>> Post Created Successfully <<<")
-	fmt.Printf("your Post ID is: %d", x)
+	fmt.Printf("your Post ID is: %d\n", x)
 }
 
 func savingPost(blog *blog, title, contents, author string) int {
