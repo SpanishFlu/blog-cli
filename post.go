@@ -1,6 +1,6 @@
 package main
 
-import "math/rand/v2"
+//import "math/rand/v2"
 
 type Post struct {
 	Title, Contents, Author string
@@ -8,12 +8,10 @@ type Post struct {
 }
 
 func assignID(blog *blog) uint {
-	for {
-		id := uint(rand.IntN(1000))
-		if !checkID(blog, id) {
-			return id
-		}
-	}
+	var pid uint
+	pid = 0
+	pid++
+	return pid
 }
 
 type blog struct {
@@ -28,3 +26,9 @@ func checkID(blog *blog, id uint) bool {
 	}
 	return false
 }
+
+/*func Newassign(blog *blog) uint{
+	ID := make(map[uint]uint)
+	for
+	ID[]
+}*/
