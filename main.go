@@ -21,6 +21,7 @@ func main() {
 			viewingPosts(myBlog)
 		case 3:
 			fmt.Println("View Post by ID selected")
+			checkEmpty(myBlog)
 			var id uint
 			fmt.Print("Enter Post ID: ")
 			fmt.Scan(&id)
