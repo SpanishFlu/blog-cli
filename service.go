@@ -47,6 +47,7 @@ func savingPost(blog *blog, title, contents, author string) uint {
 }
 
 func viewingPosts(blog *blog) {
+	id := Newassign(blog)
 	if len(blog.Posts) == 0 {
 		fmt.Println("No posts available.")
 		return
