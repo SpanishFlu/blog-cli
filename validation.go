@@ -2,7 +2,6 @@ package main
 
 import (
 	"errors"
-	"fmt"
 )
 
 func validationCreatedPost(x string) error {
@@ -17,8 +16,9 @@ func checkIfPostExists(blog *blog, id uint) bool {
 	return exists
 }
 
-func checkEmpty(blog *blog) {
+func checkEmpty(blog *blog) error {
 	if len(blog.Posts) == 0 {
-		fmt.Println("No posts has been created yet xoxo")
+		return errors.New("No posts has been created yet xoxo")
 	}
+	return nil
 }

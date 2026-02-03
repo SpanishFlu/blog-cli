@@ -21,7 +21,6 @@ func main() {
 			viewingPosts(myBlog)
 		case 3:
 			fmt.Println("View Post by ID selected")
-			checkEmpty(myBlog)
 			ViewPostbyId(myBlog)
 			return
 		case 4:
