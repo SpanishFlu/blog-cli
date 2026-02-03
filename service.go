@@ -8,21 +8,21 @@ import (
 func creatingPost(blog *blog) {
 	var title, contents, author string
 	fmt.Println("Please Enter The Title:")
-	fmt.Scanf(title)
+	fmt.Scanln(&title)
 	if err := validationCreatedPost(title); err != nil {
 		fmt.Println("Post creation failed:", err)
 		return
 	}
 
 	fmt.Println("Please Type Your Post:")
-	fmt.Scanf(contents)
+	fmt.Scanln(&contents)
 	if err := validationCreatedPost(contents); err != nil {
 		fmt.Println("Post creation failed:", err)
 		return
 	}
 
 	fmt.Println("Please Enter The Author Name:")
-	fmt.Scanf(author)
+	fmt.Scanln(&author)
 	author = strings.TrimSpace(author)
 	if err := validationCreatedPost(author); err != nil {
 		fmt.Println("Post creation failed:", err)
