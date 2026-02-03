@@ -72,6 +72,7 @@ func ViewPostbyId(blog *blog) {
 		fmt.Println("Title:", post.Title)
 		fmt.Println("Contents:", post.Contents)
 		fmt.Println("Author:", post.Author)
+		return
 	} else {
 		fmt.Println("No post with this ID")
 		return
