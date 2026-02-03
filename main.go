@@ -21,6 +21,10 @@ func main() {
 			viewingPosts(myBlog)
 		case 3:
 			fmt.Println("View Post by ID selected")
+			var id uint
+			fmt.Print("Enter Post ID: ")
+			fmt.Scan(&id)
+			ViewPostbyId(myBlog, id)
 		case 4:
 			fmt.Println("Update Post Selected")
 		case 5:
