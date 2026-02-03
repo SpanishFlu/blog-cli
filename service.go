@@ -61,7 +61,7 @@ func viewingPosts(blog *blog) {
 func ViewPostbyId(blog *blog) {
 	var id uint
 	if err := checkEmpty(blog); err != nil {
-		fmt.Println("Post creation failed:", err)
+		fmt.Println(err)
 		return
 	}
 	fmt.Print("Enter Post ID: ")
@@ -74,6 +74,7 @@ func ViewPostbyId(blog *blog) {
 		fmt.Println("Author:", post.Author)
 	} else {
 		fmt.Println("No post with this ID")
+		return
 	}
 
 }
