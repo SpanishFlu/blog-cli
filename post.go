@@ -2,7 +2,7 @@ package main
 
 import "math/rand/v2"
 
-var id uint = 0
+var id uint = 1
 
 type Post struct {
 	Title, Contents, Author string
