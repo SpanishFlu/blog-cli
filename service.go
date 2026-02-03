@@ -1,33 +1,28 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 	"strings"
 )
 
 func creatingPost(blog *blog) {
-	reader := bufio.NewReader(os.Stdin)
-
+	var title, contents, author string
 	fmt.Println("Please Enter The Title:")
-	title, _ := reader.ReadString('\n')
-	title = strings.TrimSpace(title)
+	fmt.Scanf(title)
 	if err := validationCreatedPost(title); err != nil {
 		fmt.Println("Post creation failed:", err)
 		return
 	}
 
 	fmt.Println("Please Type Your Post:")
-	contents, _ := reader.ReadString('\n')
-	contents = strings.TrimSpace(contents)
+	fmt.Scanf(contents)
 	if err := validationCreatedPost(contents); err != nil {
 		fmt.Println("Post creation failed:", err)
 		return
 	}
 
 	fmt.Println("Please Enter The Author Name:")
-	author, _ := reader.ReadString('\n')
+	fmt.Scanf(author)
 	author = strings.TrimSpace(author)
 	if err := validationCreatedPost(author); err != nil {
 		fmt.Println("Post creation failed:", err)
@@ -39,16 +34,15 @@ func creatingPost(blog *blog) {
 	fmt.Printf("your Post ID is: %d\n", x)
 }
 
-func savingPost(blog *blog, title, contents, author string) int {
-	p := Post{
+func savingPost(blog *blog, title, contents, author string) uint {
+	blog.Posts[id] = Post{
 		Title:    title,
 		Contents: contents,
 		Author:   author,
-		ID:       assignID(blog),
 	}
 	// same as p.Title = title
-	blog.Posts = append(blog.Posts, p)
-	return int(p.ID)
+	//blog.Posts = append(blog.Posts, blog.Posts[id])
+	return id
 }
 
 func viewingPosts(blog *blog) {
@@ -61,6 +55,6 @@ func viewingPosts(blog *blog) {
 		fmt.Printf("Title: %s\n", p.Title)
 		fmt.Printf("%s\n", p.Contents)
 		fmt.Printf("Author: %s\n", p.Author)
-		fmt.Printf("ID: %d\n", p.ID)
+		fmt.Printf("ID: %d\n", id)
 	}
 }
