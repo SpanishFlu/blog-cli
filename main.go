@@ -22,9 +22,9 @@ func main() {
 		case 3:
 			fmt.Println("View Post by ID selected")
 			ViewPostbyId(myBlog)
-			return
 		case 4:
 			fmt.Println("Update Post Selected")
+			updatePost(myBlog)
 		case 5:
 			fmt.Println("Delete Post selected")
 		case 6:

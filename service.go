@@ -77,3 +77,31 @@ func ViewPostbyId(blog *blog) {
 	}
 
 }
+
+func updatePost(blog *blog) {
+	var title, contents, author string
+	fmt.Printf("please enter post ID")
+	fmt.Scanln(&id)
+	post := blog.Posts[id]
+	fmt.Printf("Title: %s\n", post.Title)
+	fmt.Printf("%s\n", post.Contents)
+	fmt.Printf("Author: %s\n", post.Author)
+
+	fmt.Println("New Title: ")
+	fmt.Scanln(&title)
+	if title == post.Title {
+		fmt.Println("The Title is the same...")
+	}
+
+	fmt.Println("Edit Contents: ")
+	fmt.Scanln(&contents)
+	if contents == post.Contents {
+		fmt.Println("The Contents are the same...")
+	}
+
+	fmt.Println("Edit Author Name: ")
+	fmt.Scanln(&author)
+	if author == post.Author {
+		fmt.Println("The Author is the same...")
+	}
+}
