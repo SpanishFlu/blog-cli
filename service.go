@@ -34,11 +34,12 @@ func creatingPost(blog *blog) {
 		return
 	}
 
-	savingPost(blog, title, contents, author)
+	x := savingPost(blog, title, contents, author)
 	fmt.Println(">>> Post Created Successfully <<<")
+	fmt.Println("your Post ID is: %d", x)
 }
 
-func savingPost(blog *blog, title, contents, author string) {
+func savingPost(blog *blog, title, contents, author string) int {
 	p := Post{
 		Title:    title,
 		Contents: contents,
@@ -47,6 +48,7 @@ func savingPost(blog *blog, title, contents, author string) {
 	}
 	// same as p.Title = title
 	blog.Posts = append(blog.Posts, p)
+	return int(p.ID)
 }
 
 func viewingPosts(blog *blog) {
