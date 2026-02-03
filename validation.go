@@ -10,3 +10,8 @@ func validationCreatedPost(x string) error {
 	}
 	return nil
 }
+
+func checkIfPostExists(blog *blog, id uint) bool {
+	_, exists := blog.Posts[id]
+	return exists
+}

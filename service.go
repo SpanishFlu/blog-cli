@@ -57,3 +57,15 @@ func viewingPosts(blog *blog) {
 		fmt.Printf("ID: %d\n", id)
 	}
 }
+
+func ViewPostbyId(blog *blog, id uint) {
+	post, _ := blog.Posts[id]
+	if checkIfPostExists(blog, id) {
+		fmt.Println("Title:", post.Title)
+		fmt.Println("Contents:", post.Contents)
+		fmt.Println("Author:", post.Author)
+	} else {
+		fmt.Println("No post with this ID")
+	}
+
+}
