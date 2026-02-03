@@ -35,6 +35,7 @@ func creatingPost(blog *blog) {
 }
 
 func savingPost(blog *blog, title, contents, author string) uint {
+	id := Newassign(blog)
 	blog.Posts[id] = Post{
 		Title:    title,
 		Contents: contents,
