@@ -5,7 +5,9 @@ import "fmt"
 func main() {
 	var Choose int
 	fmt.Println("Blog CLI start")
-	myBlog := blog{}
+	myBlog := &blog{
+		Posts: make(map[uint]Post),
+	}
 
 	for {
 		printmenu()
@@ -13,10 +15,10 @@ func main() {
 		switch Choose {
 		case 1:
 			fmt.Println("Create Post selected")
-			creatingPost(&myBlog)
+			creatingPost(myBlog)
 		case 2:
 			fmt.Println("Viewing All Posts")
-			viewingPosts(&myBlog)
+			viewingPosts(myBlog)
 		case 3:
 			fmt.Println("View Post by ID selected")
 		case 4:
