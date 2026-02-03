@@ -58,7 +58,10 @@ func viewingPosts(blog *blog) {
 	}
 }
 
-func ViewPostbyId(blog *blog, id uint) {
+func ViewPostbyId(blog *blog) {
+	var id uint
+	fmt.Print("Enter Post ID: ")
+	fmt.Scan(&id)
 	post, _ := blog.Posts[id]
 
 	if checkIfPostExists(blog, id) {

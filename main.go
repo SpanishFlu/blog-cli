@@ -22,10 +22,7 @@ func main() {
 		case 3:
 			fmt.Println("View Post by ID selected")
 			checkEmpty(myBlog)
-			var id uint
-			fmt.Print("Enter Post ID: ")
-			fmt.Scan(&id)
-			ViewPostbyId(myBlog, id)
+			ViewPostbyId(myBlog)
 			return
 		case 4:
 			fmt.Println("Update Post Selected")
